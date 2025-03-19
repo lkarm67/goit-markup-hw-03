@@ -5,29 +5,62 @@ body{
     transform: capitalize;
 }
 
-ul{
-    list-style-type: none
+ul, ol{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 a{
     text-decoration: none; 
 }
 
+/*---------------Common------------------*/
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+} 
+
+.container{
+    max-width: 1158;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/*----------------Header-----------------*/
+.header-container{
+    display: flex;
+    align-items: center;
+}
+
 .header-logo{
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
+    font-family: Raleway, sans-serif;
     font-size: 18px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
+    padding: 24px 0;
+    margin-right: 76px;
 }
 
 .header-logo .logo-part{
     color: #2e2f42;
 }
 
+.header-nav{
+    display: flex;
+    align-items: center;
+}
+
+.menu-nav-list{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
 .menu-nav-link{
+    display: block;
+    padding: 24px 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -45,9 +78,18 @@ a{
 
 .address{
    font-style: normal;
+   margin-left: auto;
 } 
 
+.address-list{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
 .address-link{
+    display: block;
+    padding: 24px 0;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -63,10 +105,17 @@ a{
     color: #404bbf;
 }
 
-
+/*---------------Hero---------------------*/
 .hero-page{
     background: #2e2f42;
 }
+
+.hero-container{
+    padding: 188px 0 188px;
+    display: block;
+    align-items: center;
+}
+
 .hero-page-title{
     font-weight: 700;
     font-size: 56px;
@@ -74,8 +123,14 @@ a{
     letter-spacing: 0.02em;
     text-align: center;
     color: #fff;
+    max-width: 496px;
+    margin-left: auto;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 48px;
 }
 .hero-page-button{
+    display: block;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -84,10 +139,37 @@ a{
     font-style: italic;
     background-color:#4d5ae5;
     cursor: pointer;
+    min-width: 168px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 button:hover, button:focus{
     background-color: #404bbf;   
+}
+
+/*---------------Features-----------------*/
+
+.features-container{
+    display: flex;
+    align-items: center;
+    padding: 120px 0;
+}
+
+.features-title 
+
+.visually-hidden{
+visibility: hidden;
+}
+
+.features-list{
+    display: flex;
+    align-items: center;
+    gap: 24px;
 }
 
 .features-subtitle{
@@ -96,6 +178,11 @@ button:hover, button:focus{
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
+}
+
+.features-item{
+    width: calc((100%-72px)/4);
 }
 
 .features-item-text{
@@ -104,6 +191,7 @@ button:hover, button:focus{
     letter-spacing: 0.02em;
 }
 
+/*----------------Our Team------------------*/
 .team-page{
     background: #f4f4fd;
 }
@@ -137,7 +225,7 @@ button:hover, button:focus{
     letter-spacing: 0.02em;
     text-align: center;
 }
-
+/*----------------Portfolio---------------*/
 .portfolio-item{
     background: #fff;
 }
@@ -166,6 +254,7 @@ button:hover, button:focus{
     letter-spacing: 0.02em;
 }
 
+/*-------------Footer--------------*/
 .footer-page{
     background: #2e2f42;
 }
