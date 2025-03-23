@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6, p{
 } 
 
 .container{
-    max-width: 1158;
+    max-width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5, h6, p{
 .header-container{
     display: flex;
     align-items: center;
+    border-bottom: 1px solid #e7e9fc;
 }
 
 .header-logo{
@@ -111,8 +112,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .hero-container{
-    padding: 188px 0 188px;
-    display: block;
+    padding: 188px 0;
     align-items: center;
 }
 
@@ -124,9 +124,7 @@ h1, h2, h3, h4, h5, h6, p{
     text-align: center;
     color: #fff;
     max-width: 496px;
-    margin-left: auto;
-    margin-top: 0;
-    margin-right: auto;
+    margin: auto;
     margin-bottom: 48px;
 }
 .hero-page-button{
@@ -139,14 +137,12 @@ h1, h2, h3, h4, h5, h6, p{
     font-style: italic;
     background-color:#4d5ae5;
     cursor: pointer;
-    min-width: 168px;
+    min-width: 169px;
     height: 56px;
     border: none;
     border-radius: 4px;
-    margin-top: 0;
-    margin-right: auto;
-    margin-left: auto;
-}
+    margin: auto;
+}    
 
 button:hover, button:focus{
     background-color: #404bbf;   
@@ -157,19 +153,32 @@ button:hover, button:focus{
 .features-container{
     display: flex;
     align-items: center;
-    padding: 120px 0;
-}
-
-.features-title 
+    padding-top: 120px;
+    padding-bottom: 120px;
+} 
 
 .visually-hidden{
-visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .features-list{
     display: flex;
     align-items: center;
     gap: 24px;
+}
+
+.features-item{
+    width: calc((100% - 72px) /4);
 }
 
 .features-subtitle{
@@ -179,10 +188,6 @@ visibility: hidden;
     letter-spacing: 0.02em;
     color: #2e2f42;
     margin-bottom: 8px;
-}
-
-.features-item{
-    width: calc((100%-72px)/4);
 }
 
 .features-item-text{
@@ -196,6 +201,11 @@ visibility: hidden;
     background: #f4f4fd;
 }
 
+.team-container{ 
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
 .team-page-title{
     font-weight: 700;
     font-size: 36px;
@@ -204,10 +214,32 @@ visibility: hidden;
     text-align: center;
     color: #2e2f42;
     text-transform: capitalize;
+    margin-bottom: 72px;
 }
 
+.team-list{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}   
+
 .team-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0 0 4px 4px;
     background: #fff;
+    width: 264px;
+}
+
+.team-text-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 232px;
+    margin: 32px 16px;
 }
 
 .team-subtitle{
@@ -217,6 +249,7 @@ visibility: hidden;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .team-descr{
@@ -226,8 +259,10 @@ visibility: hidden;
     text-align: center;
 }
 /*----------------Portfolio---------------*/
-.portfolio-item{
-    background: #fff;
+.portfolio-container{
+    background-color: #fff;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .portfolio-page-title{
@@ -238,6 +273,21 @@ visibility: hidden;
     text-align: center;
     color: #2e2f42;
     text-transform: capitalize;
+    margin-bottom: 72px;
+}
+
+.portfolio-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+}
+
+.portfolio-item{
+border: 1px solid #e7e9fc;
+}
+
+.portfolio-text-box{
+    padding: 32px 16px;
 }
 
 .portfolio-subtitle{
@@ -246,6 +296,7 @@ visibility: hidden;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .portfolio-descr{
@@ -259,6 +310,12 @@ visibility: hidden;
     background: #2e2f42;
 }
 
+.footer-container{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+}
+
 .footer-logo{
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -267,6 +324,7 @@ visibility: hidden;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
+   
 }
 
 .footer-logo .logo-part{
@@ -278,4 +336,6 @@ visibility: hidden;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+    max-width: 264px;
+    margin-top: 16px;
 }
